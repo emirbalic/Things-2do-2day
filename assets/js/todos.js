@@ -16,7 +16,7 @@ $('ul').on('click', 'span', function(e){
     // alert('cuc!')
 });
 
-$("input[type='text'").on('keypress', function(event){
+$("input[type='text']").on('keypress', function(event){
     if(event.which === 13){
         var listItem = $(this).val();
         $("ul").append("<li> <span> <i class='fa fa-trash'></i> </span>" + listItem + " </li>");
@@ -24,12 +24,11 @@ $("input[type='text'").on('keypress', function(event){
             
         // console.log(listItem); 
     }
-    
-    
-    
-
 })
 
+$(".fa-tasks").click(function(){
+    $("input[type='text']").fadeToggle();
+});
 
 
 
@@ -46,8 +45,7 @@ $("input[type='text'").on('keypress', function(event){
 
 
 
-
-
+// vanilla version for toggle
 // if ($(this).css("color") === "rgb(128, 128, 128)") {
 //   //turn it black
 //   $(this).css({
