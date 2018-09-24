@@ -19,7 +19,7 @@ $('ul').on('click', 'span', function(e){
 $("input[type='text'").on('keypress', function(event){
     if(event.which === 13){
         var listItem = $(this).val();
-        $("ul").append("<li> <span> X </span>" + listItem + " </li>");
+        $("ul").append("<li> <span> <i class='fa fa-trash'></i> </span>" + listItem + " </li>");
         $('input').val(''); // or $(this)
             
         // console.log(listItem); 
